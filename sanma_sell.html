@@ -1,162 +1,183 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanma Direct | 銚子産秋刀魚を産地直送</title>
-  <!-- ✅ Tailwind – クイック CDN。ローカルで見る場合はネット接続が必要です → オフライン運用時は dist ビルドを同梱してください -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
-  <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanma Direct | 銚子産秋刀魚を産地直送</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/start.css" />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-</head>
-<body id="top" class="font-sans antialiased bg-gray-50 text-gray-800">
-  <!-- ===== Header ===== -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-2xl md:text-3xl font-bold tracking-wide text-teal-700">Sanma&nbsp;Direct</h1>
-      <nav class="hidden md:flex space-x-8 text-sm font-medium">
-        <a href="#about" class="hover:text-teal-600">こだわり</a>
-        <a href="#products" class="hover:text-teal-600">商品</a>
-        <a href="#howto" class="hover:text-teal-600">ご購入方法</a>
-        <a href="#faq" class="hover:text-teal-600">FAQ</a>
-      </nav>
-      <a href="#products" class="md:hidden inline-block bg-teal-600 text-white px-4 py-2 rounded-lg">購入</a>
-    </div>
-  </header>
-
-  <!-- ===== Hero ===== -->
-  <section class="relative h-[36rem] flex items-center justify-center text-white overflow-hidden">
-    <img src="images/hero-sanma.jpg" alt="銚子産秋刀魚" class="absolute inset-0 w-full h-full object-cover object-center" />
-    <div class="absolute inset-0 bg-gradient-to-tr from-teal-800/80 to-emerald-600/70"></div>
-    <div class="relative z-10 text-center max-w-2xl px-6">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">脂の乗った銚子産秋刀魚を<br class="hidden md:block">ご家庭へ直送！</h2>
-      <p class="text-lg md:text-xl mb-8">船上活〆・−40℃急速冷凍で鮮度を封印。送料無料でお届け。</p>
-      <a href="#products" class="inline-block bg-white text-teal-700 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition">今すぐ購入</a>
-    </div>
-  </section>
-
-  <!-- ===== About / USP ===== -->
-  <section id="about" class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12">Sanma Direct のこだわり</h3>
-      <div class="grid md:grid-cols-2 gap-10">
-        <!-- History -->
-        <div class="bg-white rounded-xl shadow p-8">
-          <h4 class="text-xl font-semibold mb-4 text-teal-700">会社の歴史</h4>
-          <ul class="list-disc pl-6 space-y-2 text-sm">
-            <li>1975年：銚子港で鮮魚仲卸 <em>丸源水産</em> として創業</li>
-            <li>1988年：秋刀魚専門ラインを新設、年間取扱量 2,000t 突破</li>
-            <li>2005年：船上活〆＆−40℃急速冷凍システム導入</li>
-            <li>2020年：オンライン直販サイト <span class="italic">Sanma Direct</span> オープン</li>
-          </ul>
-        </div>
-        <!-- Taste Secrets -->
-        <div class="bg-white rounded-xl shadow p-8">
-          <h4 class="text-xl font-semibold mb-4 text-teal-700">おいしさの秘訣</h4>
-          <ul class="list-disc pl-6 space-y-2 text-sm">
-            <li>漁獲後<strong>15 分以内</strong>に活〆し、血合いの酸化を防止</li>
-            <li>−40℃窒素凍結で<strong>細胞破壊を最小化</strong>しドリップを抑制</li>
-            <li><strong>脂質含有率 20％以上</strong>の個体だけを厳選</li>
-            <li>銚子港至近の自社 <span class="uppercase">HACCP</span> 認証工場で一貫加工</li>
-            <li>職人による手開きで骨残りゼロを実現</li>
-          </ul>
-        </div>
+  </head>
+  <body id="top">
+    <header class="header">
+      <div class="header-container">
+        <h1 class="site-title">Sanma&nbsp;Direct</h1>
+        <nav class="global-nav">
+          <a href="#about">こだわり</a>
+          <a href="#products">商品</a>
+          <a href="#howto">ご購入方法</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a href="#products" class="purchase-button-mobile">購入</a> 
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ===== Products ===== -->
-  <section id="products" class="py-20 bg-gray-100">
-    <div class="max-w-7xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12">商品ラインナップ</h3>
-      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Product Card -->
-        <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition group">
-          <img src="images/sanma-whole.jpg" alt="生秋刀魚" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
-          <div class="p-6 space-y-4">
-            <h4 class="text-lg font-semibold">生秋刀魚 10尾セット</h4>
-            <p class="text-emerald-600 font-bold text-xl">¥2,980 <span class="text-sm text-gray-500 font-normal">(税込)</span></p>
-            <button class="w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700">カートに追加</button>
+    <section class="hero">
+      <img src="images/hero-sanma.jpg" alt="銚子産秋刀魚" class="hero-image" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2 class="hero-title">
+          脂の乗った銚子産秋刀魚を<br class="hidden-md" />ご家庭へ直送！
+        </h2>
+        <p class="hero-description">
+          船上活〆・−40℃急速冷凍で鮮度を封印。送料無料でお届け。
+        </p>
+        <a href="#products" class="hero-button">今すぐ購入</a>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h3 class="section-title">Sanma Direct のこだわり</h3>
+        <div class="about-grid">
+          <div class="card">
+            <h4 class="card-title">会社の歴史</h4>
+            <ul class="list">
+              <li>1975年：銚子港で鮮魚仲卸 <em>丸源水産</em> として創業</li>
+              <li>1988年：秋刀魚専門ラインを新設、年間取扱量 2,000t 突破</li>
+              <li>2005年：船上活〆＆−40℃急速冷凍システム導入</li>
+              <li>
+                2020年：オンライン直販サイト
+                <span class="italic">Sanma Direct</span> オープン
+              </li>
+            </ul>
           </div>
-          <span class="absolute top-4 right-4 bg-red-500 text-white text-xs font-semibold px-2 py-0.5 rounded">NEW</span>
-        </div>
 
-        <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition group">
-          <img src="images/sanma-hiraki.jpg" alt="開き秋刀魚" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
-          <div class="p-6 space-y-4">
-            <h4 class="text-lg font-semibold">開き秋刀魚 塩だれ漬け 5枚</h4>
-            <p class="text-emerald-600 font-bold text-xl">¥1,980 <span class="text-sm text-gray-500 font-normal">(税込)</span></p>
-            <button class="w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700">カートに追加</button>
+          <div class="card">
+            <h4 class="card-title">おいしさの秘訣</h4>
+            <ul class="list">
+              <li>
+                漁獲後<strong>15 分以内</strong>に活〆し、血合いの酸化を防止
+              </li>
+              <li>
+                −40℃窒素凍結で<strong>細胞破壊を最小化</strong>しドリップを抑制
+              </li>
+              <li><strong>脂質含有率 20％以上</strong>の個体だけを厳選</li>
+              <li>
+                銚子港至近の自社
+                <span class="uppercase">HACCP</span> 認証工場で一貫加工
+              </li>
+              <li>職人による手開きで骨残りゼロを実現</li>
+            </ul>
           </div>
-          <span class="absolute top-4 right-4 bg-yellow-400 text-gray-900 text-xs font-semibold px-2 py-0.5 rounded">人気</span>
         </div>
+      </div>
+    </section>
 
-        <div class="relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition group">
-          <img src="images/sanma-chazuke.jpg" alt="秋刀魚茶漬け" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
-          <div class="p-6 space-y-4">
-            <h4 class="text-lg font-semibold">秋刀魚茶漬け 4食セット</h4>
-            <p class="text-emerald-600 font-bold text-xl">¥1,480 <span class="text-sm text-gray-500 font-normal">(税込)</span></p>
-            <button class="w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700">カートに追加</button>
+    <section id="products" class="products-section">
+      <div class="container">
+        <h3 class="section-title">商品ラインナップ</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <img
+              src="images/sanma-whole.jpg"
+              alt="生秋刀魚"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h4 class="product-title">生秋刀魚 10尾セット</h4>
+              <p class="product-price">
+                ¥2,980 <span class="price-tax">(税込)</span>
+              </p>
+              <button class="add-to-cart-button">カートに追加</button>
+            </div>
+            <span class="product-badge new-badge">NEW</span>
           </div>
-          <span class="absolute top-4 right-4 bg-rose-500 text-white text-xs font-semibold px-2 py-0.5 rounded">限定</span>
+
+          <div class="product-card">
+            <img
+              src="images/sanma-hiraki.jpg"
+              alt="開き秋刀魚"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h4 class="product-title">開き秋刀魚 塩だれ漬け 5枚</h4>
+              <p class="product-price">
+                ¥1,980 <span class="price-tax">(税込)</span>
+              </p>
+              <button class="add-to-cart-button">カートに追加</button> 
+            </div>
+            <span class="product-badge popular-badge">人気</span>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="images/sanma-chazuke.jpg"
+              alt="秋刀魚茶漬け"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h4 class="product-title">秋刀魚茶漬け 4食セット</h4>
+              <p class="product-price">
+                ¥1,480 <span class="price-tax">(税込)</span>
+              </p>
+              <button class="add-to-cart-button">カートに追加</button> 
+            </div>
+            <span class="product-badge limited-badge">限定</span>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-<footer class="bg-gray-900 text-white pt-16 pb-8 mt-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid md:grid-cols-3 gap-10 mb-12">
-      <!-- サイトマップ -->
-      <div>
-        <h5 class="text-lg font-semibold mb-4">サイトマップ</h5>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-teal-300">HOME トップページ</a></li>
-          <li><a href="#" class="hover:text-teal-300">aaaa</a></li>
-          <li><a href="#" class="hover:text-teal-300">WE 私たちについて</a></li>
-          <li><a href="#" class="hover:text-teal-300">FAQ 魚相談</a></li>
-        </ul>
-      </div>
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-grid">
+          <div>
+            <h5 class="footer-heading">サイトマップ</h5>
+            <ul class="footer-list">
+              <li><a href="#">HOME トップページ</a></li>
+              <li><a href="#">aaaa</a></li>
+              <li><a href="#">WE 私たちについて</a></li>
+              <li><a href="#">FAQ 魚相談</a></li>
+            </ul>
+          </div>
 
-      <!-- ドキュメント -->
-      <div>
-        <h5 class="text-lg font-semibold mb-4">各種情報</h5>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-teal-300">プライバシーポリシー</a></li>
-          <li><a href="#" class="hover:text-teal-300">お問い合わせ</a></li>
-          <li><a href="#" class="hover:text-teal-300">会社概要</a></li>
-        </ul>
-      </div>
+          <div>
+            <h5 class="footer-heading">各種情報</h5>
+            <ul class="footer-list">
+              <li><a href="#">プライバシーポリシー</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+              <li><a href="#">会社概要</a></li>
+            </ul>
+          </div>
 
-      <!-- SNSリンク -->
-      <div>
-        <h5 class="text-lg font-semibold mb-4">SNS</h5>
-        <div class="flex space-x-4 text-xl">
-          <a href="#" class="hover:text-teal-400"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" class="hover:text-teal-400"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="hover:text-teal-400"><i class="fab fa-facebook-square"></i></a>
+          <div>
+            <h5 class="footer-heading">SNS</h5>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-x-twitter"></i></a> 
+              <a href="#"><i class="fab fa-instagram"></i></a> 
+              <a href="#"><i class="fab fa-facebook-square"></i></a> 
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 Sanma Direct</p>
+          <a href="#top" aria-label="トップページへ戻る" class="back-to-top"
+            >↑</a
+          >
         </div>
       </div>
-    </div>
-
-    <!-- 下部 -->
-    <div class="border-t border-gray-700 pt-6 text-sm text-gray-400 flex justify-between items-center">
-      <p>© 2025 Sanma Direct</p>
-      <a href="#top" aria-label="トップページへ戻る" class="hover:text-white text-lg">↑</a>
-    </div>
-  </div>
-</footer>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./assets/js/index.js"></script>
-</body>
+  </body>
 </html>
