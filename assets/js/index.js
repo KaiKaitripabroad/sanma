@@ -6,6 +6,7 @@ $(function () {
     // ハンバーガーボタンのアクティブクラスを切り替えて三本線をバツにする
     $(this).toggleClass("active");
   });
+
   $(".hero-overlay").on("mouseenter", function () {
     $(this)
       .stop()
@@ -33,11 +34,15 @@ $(function () {
   });
 
   $(".card").mouseover(function () {
-    $(this).css("transform","translateY(-10px)").css("box-shadow","0 4px 8px rgba(0, 0, 0, 0.2)");
+    $(this)
+      .css("transform", "translateY(-10px)")
+      .css("box-shadow", "0 4px 8px rgba(0, 0, 0, 0.2)");
   });
 
   $(".card").mouseout(function () {
-    $(this).css("transform","translateY(0)").css("box-shadow","0 2px 4px rgba(0, 0, 0, 0.1)");
+    $(this)
+      .css("transform", "translateY(0)")
+      .css("box-shadow", "0 2px 4px rgba(0, 0, 0, 0.1)");
   });
   $(".hero-button").mouseover(function () {
     $(this).css("background-color", "#0d5e94").css("color", "#fff");
